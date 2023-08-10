@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Links
 
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Live Site URL: [My Solution](https://frontendmentor-newsletter-solution.netlify.app/)
 
 ## My process
 
@@ -43,7 +43,7 @@ Users should be able to:
 Used this in order to create a title for the body element without actually showing it on page which I believe it's useful for screenreaders or/and SEO.
 
 ```css
-- form p span::before {
+form p span::before {
     content: "";
 
     font-size: 1.3rem;
@@ -55,14 +55,14 @@ Used this in order to create a title for the body element without actually showi
 
     opacity: 0;
 }
-- form input:invalid:focus {
+form input:invalid:focus {
     color: hsl(4, 100%, 67%);
     background-color: hsl(4, 65%, 90%);
 
     border: 1px solid hsl(4, 100%, 67%);
 }
 
-- form input:invalid:focus ~ span::before {
+form input:invalid:focus ~ span::before {
     content: "Valid email required";
 
     font-size: 1.3rem;
@@ -101,7 +101,7 @@ After this:
 
 ### Useful resources
 
--   [Example resource 1](https://www.w3resource.com/javascript/form/email-validation.php) - This Article helped me a lot in creating the validation for the email!
+-   [Email Validation Resource](https://www.w3resource.com/javascript/form/email-validation.php) - This Article helped me a lot in creating the validation for the email!
 
 ## Author
 
