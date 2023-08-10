@@ -22,6 +22,7 @@ body {
 
     font-family: "Roboto", sans-serif;
     background-color: hsl(235, 18%, 26%);
+    color: hsl(235, 18%, 26%);
 }
 
 body h1 {
@@ -141,6 +142,8 @@ form p input {
 
     width: 100%;
     padding: 2.5rem;
+
+    background: 0;
 }
 
 form p span::before {
@@ -215,6 +218,9 @@ form button:hover {
 /* TABLET & DESKTOP MQ */
 
 @media screen and (min-width: 900px) {
+    ul {
+        gap: 0.8rem;
+    }
     main {
         position: absolute;
         left: 50%;
@@ -226,12 +232,13 @@ form button:hover {
         max-width: 95rem;
         max-height: 65rem;
         padding: 2.5rem;
+    
 
         border-radius: 2rem;
     }
 
     main figure.img__container {
-        flex: 1;
+        flex: 1.2;
 
         background-image: url("assets/images/illustration-sign-up-desktop.svg");
 
@@ -242,11 +249,18 @@ form button:hover {
         flex: 1;
 
         margin: auto;
-        padding: 3rem;
+        padding: 4rem;
+        /* margin-left: 1rem; */
+    }
+
+    article div {
+        gap: 2rem;
+
+        margin-bottom: 4rem;
     }
 
     article div h2 {
-        font-size: 5rem;
+        font-size: 5.5rem;
     }
 
     /* success state styles for tablet/desktop MQ */
