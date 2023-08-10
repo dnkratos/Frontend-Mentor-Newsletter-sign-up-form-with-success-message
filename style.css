@@ -22,7 +22,7 @@ body {
 
     font-family: "Roboto", sans-serif;
     background-color: hsl(235, 18%, 26%);
-    color: hsl(235, 18%, 26%);
+    color: hsl(234, 29%, 20%);
 }
 
 body h1 {
@@ -238,7 +238,7 @@ form button:hover {
     }
 
     main figure.img__container {
-        flex: 1.2;
+        flex: 1.1;
 
         background-image: url("assets/images/illustration-sign-up-desktop.svg");
 
