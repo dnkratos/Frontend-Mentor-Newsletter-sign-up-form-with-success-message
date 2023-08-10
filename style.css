@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL STYLES */
+
+html {
+    font-size: 62.5%;
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+
+    font-family: "Roboto", sans-serif;
+    background-color: hsl(235, 18%, 26%);
+}
+
+body h1 {
+    visibility: hidden;
+    position: absolute;
+}
+
+button {
+    display: block;
+    cursor: pointer;
+
+    padding: 2.5rem;
+    width: 100%;
+
+    border-radius: 1rem;
+    border: transparent;
+
+    background: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+
+    font-weight: 700;
+    transition: opacity 0.2s ease-in-out;
+}
+/* LIST STYLES */
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    list-style-position: inside;
+    list-style-image: url("assets/images/icon-list.svg");
+}
+
+ul li span {
+    position: relative;
+    bottom: 0.5rem;
+    left: 0.4rem;
+}
+
+/* MAIN STYLES */
+
+main {
+    /* visibility: hidden; */
+    background-color: whitesmoke;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3rem;
+}
+
+main.hidden {
+    display: none;
+}
+main article {
+    padding-left: 2.6rem;
+    padding-right: 3rem;
+}
+
+figure.img__container {
+    background-image: url("assets/images/illustration-sign-up-mobile.svg");
+    background-size: cover;
+    min-height: 30rem;
+    max-width: 100%;
+    height: auto;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+article div {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+
+    margin-bottom: 4rem;
+}
+
+article div h2 {
+    font-size: 4rem;
+}
+
+/* FORM STYLES */
+
+form {
+    margin-bottom: 3rem;
+
+    transition: all 0.2s ease-in-out;
+}
+form p {
+    margin-bottom: 2.5rem;
+}
+form p {
+    position: relative;
+}
+
+form p label {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+form p input {
+    border: 1px solid hsl(231, 7%, 60%);
+    border-radius: 1rem;
+
+    transition: all 0.2s;
+    outline: transparent;
+
+    display: block;
+
+    font-size: inherit;
+
+    width: 100%;
+    padding: 2.5rem;
+}
+
+form p span::before {
+    content: "";
+
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    color: hsl(4, 100%, 67%);
+
+    transition: all 0.3s ease-in-out;
+
+    opacity: 0;
+}
+form input:invalid:focus {
+    color: hsl(4, 100%, 67%);
+    background-color: hsl(4, 65%, 90%);
+
+    border: 1px solid hsl(4, 100%, 67%);
+}
+
+form input:invalid:focus ~ span::before {
+    content: "Valid email required";
+
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    color: hsl(4, 100%, 67%);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    opacity: 1;
+}
+
+form button:hover {
+    opacity: 0.95;
+}
+
+/* success state styles */
+.succes.hidden {
+    display: none;
+}
+.succes {
+    display: flex;
+    flex-direction: column;
+
+    padding: 3.5rem;
+
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+.succes div {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    margin: auto 0;
+}
+
+.succes h2 {
+    line-height: 1;
+    font-size: 4rem;
+}
+
+.succes button {
+    margin-top: auto;
+}
+
+/* TABLET & DESKTOP MQ */
+
+@media screen and (min-width: 900px) {
+    main {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        flex-direction: row-reverse;
+
+        max-width: 95rem;
+        max-height: 65rem;
+        padding: 2.5rem;
+
+        border-radius: 2rem;
+    }
+
+    main figure.img__container {
+        flex: 1;
+
+        background-image: url("assets/images/illustration-sign-up-desktop.svg");
+
+        border-radius: 1.5rem;
+    }
+
+    main article {
+        flex: 1;
+
+        margin: auto;
+        padding: 3rem;
+    }
+
+    article div h2 {
+        font-size: 5rem;
+    }
+
+    /* success state styles for tablet/desktop MQ */
+    .succes.hidden {
+        display: none;
+    }
+    .succes {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        padding: 3.5rem;
+
+        width: 45rem;
+        height: 50rem;
+        background-color: whitesmoke;
+
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 2rem;
+
+        box-shadow: ;
+    }
+
+    .succes div {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        margin: auto 0;
+    }
+
+    .succes h2 {
+        line-height: 1;
+        font-size: 4rem;
+    }
+
+    .succes button {
+        margin-top: auto;
+    }
+}
