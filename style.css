@@ -232,9 +232,10 @@ form button:hover {
         max-width: 95rem;
         max-height: 65rem;
         padding: 2.5rem;
-    
+        /* padding: 3.5 2.5rem; */
 
-        border-radius: 2rem;
+        box-shadow: 0 1rem 2rem hsla(234, 29%, 20%, 0.823);
+        border-radius: 1rem;
     }
 
     main figure.img__container {
@@ -249,7 +250,7 @@ form button:hover {
         flex: 1;
 
         margin: auto;
-        padding: 4rem;
+        padding: 5rem;
         /* margin-left: 1rem; */
     }
 
