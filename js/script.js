@@ -5,6 +5,7 @@ const emailInput = document.querySelector("#email");
 const main = document.querySelector("main");
 
 const dialogElement = document.querySelector("dialog");
+const dialogSpan = document.querySelector("dialog span");
 const dismissBtn = document.querySelector("dialog.succes button");
 
 const validateEmail = function (inputText) {
@@ -26,8 +27,12 @@ submitBtn.addEventListener("click", function (e) {
 
     if (validateEmail(emailInput)) {
         main.classList.add("hidden");
+        emailInput.value;
         dialogElement.showModal();
 
+        dialogSpan.innerHTML = "";
+        dialogSpan.innerHTML = `${emailInput.value}`;
+        
         emailInput.value = "";
     } else {
         emailInput.value = "";
